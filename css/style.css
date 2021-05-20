@@ -1,8 +1,17 @@
 @import url("reset.css");
 
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
 main{
     max-width: 620px;
     margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +26,6 @@ input{
     padding: 10px;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 a{
     text-decoration: none;
     color: black;
@@ -32,7 +35,7 @@ a:hover{
     text-decoration: underline;
 }
 
-ul{
+nav ul{
     margin-top: 15px;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -135,4 +138,35 @@ input:focus{
 
 #search_buttons button:first-of-type{
     margin-right: 10px;
+}
+
+footer{
+    background-color: rgb(226, 226, 226);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 300px 1fr 260px;
+    font-size: 14px;
+    padding: 15px 5px 15px 15px;;
+}
+
+#footer_left{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer_right{
+    width: 100%;
+    grid-column-start: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
